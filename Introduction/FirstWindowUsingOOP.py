@@ -9,6 +9,7 @@ class WindowExample(QWidget):
 
         self.setGeometry(200,200,400,300)
         self.setWindowTitle("First Title")
+        self.setWindowIcon(QIcon("../Images/design.png"))
         self.show()
 
 #creating our application
