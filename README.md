@@ -8,3 +8,4 @@ PyQt is a set of Python bindings for The Qt Company's Qt application framework a
 - [QWidget, Qdialog, QMainwindow]()
 - [Basic Functions of QWidget](Introduction/FirstWindowUsingOOP.py)
 - [Adding PushButtons](Introduction/QpushButton.py)
+- [Signal and Slot](Introduction/signalsAndSlots.py)
