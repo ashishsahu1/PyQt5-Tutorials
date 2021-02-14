@@ -37,7 +37,9 @@ class MainWindow(qtw.QWidget):
         btnDiv = qtw.QPushButton('/')
 
         #adding the buttons to the layout
-        container.layout().addWidget(resultField,0,0,)
+        container.layout().addWidget(resultField,0,0)
+        container.layout().addWidget(btnResult,0,1)
+        container.layout().addWidget(btnClear,0,2)
 
 
 app = qtw.QApplication([])
