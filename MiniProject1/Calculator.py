@@ -5,15 +5,13 @@ class MainWindow(qtw.QWidget):
     def __init__(self):
         super().__init__()
         self.setWindowTitle('Calculator')
+        self.setGeometry(500,300,500,300)
         self.setLayout(qtw.QVBoxLayout())
-        # btn1 = qtw.QPushButton('test')
-        # btn2 = qtw.QPushButton('test')
-        # self.layout().addWidget(btn1)
-        # self.layout().addWidget(btn2)
 
         self.keypad()
 
         self.show()
+
     def keypad(self):
         container= qtw.QWidget()
         container.setLayout(qtw.QGridLayout())
@@ -37,9 +35,26 @@ class MainWindow(qtw.QWidget):
         btnDiv = qtw.QPushButton('/')
 
         #adding the buttons to the layout
-        container.layout().addWidget(resultField,0,0)
-        container.layout().addWidget(btnResult,0,1)
-        container.layout().addWidget(btnClear,0,2)
+        container.layout().addWidget(resultField,0,0,1,4)
+        container.layout().addWidget(btnResult,1,0,1,2)
+        container.layout().addWidget(btnClear,1,2,1,2)
+        container.layout().addWidget(btn9,2,0)
+        container.layout().addWidget(btn8,2,1)
+        container.layout().addWidget(btn7,2,2)
+        container.layout().addWidget(btnAdd,2,3)
+        container.layout().addWidget(btn6,3,0)
+        container.layout().addWidget(btn5,3,1)
+        container.layout().addWidget(btn4,3,2)
+        container.layout().addWidget(btnSub,3,3)
+        container.layout().addWidget(btn3,4,0)
+        container.layout().addWidget(btn2,4,1)
+        container.layout().addWidget(btn1,4,2)
+        container.layout().addWidget(btnMul,4,3)
+        container.layout().addWidget(btn0,5,0,1,3)
+        container.layout().addWidget(btnDiv,5,3)
+
+
+        self.layout().addWidget(container)
 
 
 app = qtw.QApplication([])
